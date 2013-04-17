@@ -1,0 +1,4 @@
+\curl https://raw.github.com/vovimayhem/vm-guest-recipes/master/centos/nginx/install.sh | sudo bash -s
+\curl https://raw.github.com/vovimayhem/vm-guest-recipes/master/centos/java/install.sh | sudo bash -s
+\curl https://raw.github.com/vovimayhem/vm-guest-recipes/master/centos/mysql/install.sh | sudo bash -s
+yum install -y git.x86_64 --enablerepo=remi
