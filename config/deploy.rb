@@ -47,7 +47,8 @@ _cset(:puma_role) { :app }
 _cset(:puma_params) { {
   'threads'       => '16:32',
   'environment'   => "#{fetch(:rails_env)}",
-  'bind'          => "'unix://#{fetch(:shared_path)}/sockets/puma.sock'",
+  'bind'          => 'tcp://127.0.0.1:9292',
+#  'bind'          => "'unix://#{fetch(:shared_path)}/sockets/puma.sock'",
   'state'         => "#{fetch(:puma_state)}",
   'control'       => "'unix://#{fetch(:shared_path)}/sockets/pumactl.sock'",
   'control-token' => "foo"
