@@ -27,9 +27,9 @@ test:
   host: localhost
 
 production:
+  database: <%= ENV['MYSQL_DATABASE'] %>
+  username: <%= ENV['MYSQL_USERNAME'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: <%= ENV['MYSQL_ADDRESS'] %>
   adapter: mysql2
-  database: jruby_rails_production
-  username: root
-  password:
-  socket: /var/lib/mysql/mysql.sock
-  pool: 32
+  port: 3306
